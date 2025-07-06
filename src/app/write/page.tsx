@@ -147,7 +147,7 @@ const Write = () => {
             </div>
 
             <div className="flex justify-end">
-              <Button type="submit" disabled={isPending}>
+              <Button type="submit" className="bg-green-700 text-white font-semibold" disabled={isPending}>
                 {isPending ? "Loading" : "Submit"}
               </Button>
             </div>

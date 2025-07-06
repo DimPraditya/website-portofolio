@@ -69,7 +69,7 @@ const SignIn = () => {
               </div>
             </CardContent>
             <CardFooter className="flex-col gap-2">
-              <Button type="submit" className="w-full" disabled={isPending}>
+              <Button type="submit" className="w-full bg-green-700 text-white font-semibold" disabled={isPending}>
                 {isPending ? <Loader className="animate-spin" /> : "Login"}
               </Button>
             </CardFooter>

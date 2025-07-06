@@ -91,7 +91,7 @@ const SignUp = () => {
               </div>
             </CardContent>
             <CardFooter className="flex-col gap-2">
-              <Button type="submit" className="w-full" disabled={isPending}>
+              <Button type="submit" className="w-full bg-green-700 text-white font-semibold" disabled={isPending}>
                 {isPending ? <Wrench className="=animate-spin" /> : "Register"}
               </Button>
             </CardFooter>

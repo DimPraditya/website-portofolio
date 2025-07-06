@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { bebasNeue } from "@/lib/fonts";
 import BlogList from "./BlogList";
 import Link from "next/link";
+import { InfiniteMovingCardsDemo } from "@/components/Testimonials";
 
 const Hero = () => {
   return (
@@ -63,6 +64,12 @@ const Hero = () => {
           Articles
         </h2>
         <BlogList />
+      </div>
+      <div className="pb-40">
+        <h2 className={`text-6xl font-bold ${bebasNeue.className}`}>
+          What our customers said
+        </h2>
+          <InfiniteMovingCardsDemo />
       </div>
     </main>
   );
