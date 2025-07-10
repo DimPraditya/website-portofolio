@@ -2,82 +2,67 @@ import { bebasNeue } from "@/lib/fonts";
 import Testimonials from "./_components/page";
 
 const products = () => {
+  const items = [
+    {
+      img: "capuccino.webp",
+      title: "Capuccino",
+      desc: "Espresso with steamed milk and thick foam.",
+    },
+    {
+      img: "affogato.webp",
+      title: "Affogato",
+      desc: "Vanilla ice cream topped with hot espresso.",
+    },
+    {
+      img: "coldbrew.webp",
+      title: "Cold Brew",
+      desc: "Coffee steeped cold for a smooth taste.",
+    },
+    {
+      img: "espresso.webp",
+      title: "Espresso",
+      desc: "Strong, concentrated black coffee shot.",
+    },
+    {
+      img: "frappe.webp",
+      title: "Frappe",
+      desc: "Blended iced coffee, sweet and frothy.",
+    },
+    {
+      img: "matcha.webp",
+      title: "Matcha Latte",
+      desc: "Green tea powder with milk.",
+    },
+  ];
+
   return (
-    <main className="container mx-auto mt-16 text-center">
-      <h1 className={`text-6xl mb-16 font-bold ${bebasNeue.className}`}>
+    <main className="container mx-auto mt-28 px-4 text-center">
+      <h1
+        className={`text-4xl md:text-6xl mb-12 font-bold ${bebasNeue.className}`}
+      >
         PRODUK KAMI
       </h1>
-      <div className="flex justify-between text-left font-semibold items-center">
-        <div className="">
-          <img
-            src="capuccino.webp"
-            className="h-[350px] w-[270] rounded-2xl"
-            alt="product"
-          />
-          <p className="mt-4">
-            Capuccino <br /> Espresso with steamed milk and thick foam. <br />{" "}
-            Rp. 20000
-          </p>
-        </div>
-        <div>
-          <img
-            src="affogato.webp"
-            className="h-[350px] w-[270] rounded-2xl"
-            alt="product"
-          />
-          <p className="mt-4">
-            Affogato <br /> Vanilla ice cream topped with hot espresso. <br />{" "}
-            Rp. 20000
-          </p>
-        </div>
-        <div>
-          <img
-            src="coldbrew.webp"
-            className="h-[350px] w-[270] rounded-2xl"
-            alt="product"
-          />
-          <p className="mt-4">
-            Cold Brew <br /> Coffee steeped cold for a smooth taste.. <br /> Rp.
-            20000
-          </p>
-        </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-left font-semibold place-items-center">
+        {items.map((item, index) => (
+          <div key={index} className="w-full max-w-[270px]">
+            <img
+              src={item.img}
+              alt={item.title}
+              className="h-[350px] w-full rounded-2xl object-cover"
+            />
+            <div className="mt-4 space-y-1">
+              <h3 className="text-xl font-bold text-green-800">{item.title}</h3>
+              <p className="text-base text-gray-700">{item.desc}</p>
+              <p className="text-green-700 font-semibold mt-1">Rp. 20.000</p>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="flex justify-between items-center text-left mt-20 mb-30 font-semibold">
-        <div>
-          <img
-            src="espresso.webp"
-            className="h-[350px] w-[270] rounded-2xl"
-            alt="product"
-          />
-          <p className="mt-4">
-            Espresso <br /> Strong, concentrated black coffee shot. <br /> Rp.
-            20000
-          </p>
-        </div>
-        <div>
-          <img
-            src="frappe.webp"
-            className="h-[350px] w-[270] rounded-2xl"
-            alt="product"
-          />
-          <p className="mt-4">
-            Frappe <br /> Blended iced coffee, sweet and frothy. <br /> Rp.
-            20000
-          </p>
-        </div>
-        <div>
-          <img
-            src="matcha.webp"
-            className="h-[350px] w-[270] rounded-2xl"
-            alt="product"
-          />
-          <p className="mt-4">
-            Matcha Latte <br /> Green tea powder with milk.
-            <br /> Rp. 20000
-          </p>
-        </div>
+
+      <div className="mt-20 mb-32">
+        <Testimonials />
       </div>
-      <Testimonials />
     </main>
   );
 };

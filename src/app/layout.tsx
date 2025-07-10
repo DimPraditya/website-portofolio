@@ -5,6 +5,7 @@ import ReactQueryProvider from "@/providers/ReactQueryProvider";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/Navbar";
 import { bebasNeue } from "@/lib/fonts";
+import Footer from "@/components/Footer";
 bebasNeue;
 
 const geistSans = Geist({
@@ -30,11 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-[#fef9f3] antialiased`}
       >
         <ReactQueryProvider>
           <Navbar />
           {children}
+          <Footer/>
         </ReactQueryProvider>
         <Toaster richColors position="top-center" />
       </body>

@@ -6,8 +6,9 @@ import BlogCardSkeleton from "./BlogCardSkeleton";
 
 const BlogList = () => {
   const { data: blogs, isPending } = useGetBlogs();
+
   return (
-    <section className="grid grid-cols-3 gap-8">
+    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
       {isPending && <BlogCardSkeleton count={3} />}
 
       {blogs?.map((blog) => (

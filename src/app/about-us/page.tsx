@@ -1,14 +1,20 @@
 import Team from "@/components/Team";
 import { bebasNeue } from "@/lib/fonts";
-const aboutUs = () => {
+
+const AboutUs = () => {
   return (
     <main className="container mx-auto px-4">
-      <div className="grid grid-cols-2 pb-20 ">
-        <div className="flex flex-col mx-30 my-20 justify-center text-justify items-center">
-          <h1 className={`text-8xl font-bold ${bebasNeue.className} mb-10`}>
+      {/* Sejarah Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-12 md:py-20">
+        <div className="flex flex-col justify-center items-start text-justify space-y-6">
+          <h1
+            className={`text-4xl md:text-6xl lg:text-8xl font-bold ${bebasNeue.className}`}
+          >
             SEJARAH KAMI
           </h1>
-          <p className={`text-xl font-semibold${bebasNeue.className}`}>
+          <p
+            className={`text-base md:text-xl font-semibold ${bebasNeue.className}`}
+          >
             Berawal dari komitmen untuk menyajikan kopi berkualitas tinggi, Kopi
             Titik mengandalkan kekayaan biji kopi lokal seperti Arabika,
             Robusta, dan Liberika dari berbagai daerah di Indonesia. Dengan
@@ -19,28 +25,45 @@ const aboutUs = () => {
             besar hingga pelosok daerah.
           </p>
         </div>
-        <div className="ml-30">
-          <img src="about1.webp" alt="brewed" />
+        <div className="flex justify-center items-center">
+          <img
+            src="about1.webp"
+            alt="brewed"
+            className="w-full h-auto object-cover rounded-lg"
+          />
         </div>
       </div>
-      <div className="mb-40">
-        <Team/>
+
+      {/* Team Section */}
+      <div className="mb-20 md:mb-40 px-4">
+        <Team />
       </div>
-      <div className="text-justify ml-30 mb-30">
-        <h2 className={`text-6xl mb-4 font-semibold ${bebasNeue.className}`}>
-          Workplace Environment
-        </h2>
-        <p className="text-xl">
-          Kopi Titik menghadirkan lingkungan kerja yang hangat, inklusif, dan
-          saling menghargai. Karyawan didukung dengan pelatihan, mentoring, dan
-          jenjang karier yang jelas. Fokus pada pelayanan ramah, penggunaan
-          standar internasional tetap dibalut dengan nilai lokal. Keseimbangan
-          kerja dan kehidupan pribadi juga dijaga agar karyawan tetap bahagia
-          dan produktif.
+
+      {/* Workplace Environment Section */}
+      <div className="px-4 md:px-12 mb-20 md:mb-32">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2
+            className={`text-4xl md:text-6xl font-semibold mb-4 ${bebasNeue.className}`}
+          >
+            Workplace Environment
+          </h2>
+          <div className="w-20 h-1 bg-green-800 mx-auto mb-6 rounded-full" />
+        </div>
+
+        <p className="text-base md:text-lg text-justify leading-relaxed text-gray-800 max-w-4xl mx-auto">
+          Kopi Titik menciptakan lingkungan kerja yang profesional, inklusif,
+          dan mendukung pertumbuhan individu. Setiap anggota tim diberikan akses
+          terhadap pelatihan berkala, sistem mentoring yang terstruktur, serta
+          jenjang karier yang jelas dan transparan. Dengan menggabungkan standar
+          operasional bertaraf internasional dan nilai-nilai lokal, kami
+          membangun budaya kerja yang produktif dan harmonis. Keseimbangan
+          antara kehidupan kerja dan pribadi menjadi prioritas utama, karena
+          kami percaya bahwa karyawan yang bahagia akan memberikan pelayanan
+          terbaik kepada pelanggan.
         </p>
       </div>
     </main>
   );
 };
 
-export default aboutUs;
+export default AboutUs;

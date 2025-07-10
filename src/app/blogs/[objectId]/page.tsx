@@ -10,7 +10,7 @@ const BlogDetail = async ({
 }) => {
   const objectId = (await params).objectId;
   return (
-    <main className="container mx-auto px-4 pb-20">
+    <main className="container mx-auto mt-28 px-4 pb-20">
       <Suspense fallback={<Loading />}>
         <BlogHeader objectId={objectId}></BlogHeader>
         <BlogBody objectId={objectId}></BlogBody>
