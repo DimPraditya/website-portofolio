@@ -29,7 +29,7 @@ const Hero = () => {
 
       {/* Intro Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 py-20 items-center ">
-        <div className="flex flex-col justify-center items-start text-left space-y-6">
+        <div className="flex flex-col justify-center items-center text-left space-y-6">
             <p className="text-base md:text-lg text-justify leading-relaxed">
               Kopi Titik adalah brand kopi spesialis dengan konsep Made to Order
               yang menghadirkan kopi berkualitas segar di setiap sajian. Kami
@@ -41,7 +41,7 @@ const Hero = () => {
               People di mana pun berada.
             </p>
             <Link href="/about-us">
-              <Button className="bg-green-700 hover:bg-green-600 text-white font-semibold text-lg px-6 py-2 rounded-md">
+              <Button className="bg-green-700 hover:bg-green-600 cursor-pointer text-white font-semibold text-lg px-6 py-2 rounded-md">
                 Lihat Selengkapnya
               </Button>
             </Link>
@@ -70,7 +70,7 @@ const Hero = () => {
               className="w-full h-auto object-cover rounded-lg shadow-md"
             />
           </div>
-          <div className="flex flex-col justify-center space-y-6">
+          <div className="flex flex-col justify-center items-center space-y-6">
             <p className="text-base md:text-lg text-justify leading-relaxed">
               Kopi kami dibuat dari 100% biji kopi Indonesia pilihan, seperti
               Arabika, Robusta, dan Liberika. Diseduh langsung saat dipesan,
@@ -79,7 +79,7 @@ const Hero = () => {
               kami siap menemani hari Anda dengan cita rasa terbaik.
             </p>
             <Link href="/products">
-              <Button className="bg-green-700 hover:bg-green-600 text-white font-semibold text-lg px-6 py-2 rounded-md">
+              <Button className="bg-green-700 hover:bg-green-600 text-white cursor-pointer font-semibold text-lg px-6 py-2 rounded-md">
                 Cek Produk Kami
               </Button>
             </Link>
